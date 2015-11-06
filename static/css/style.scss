@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+$header-height: 100px;
+$footer-height: 125px;
+
+.app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    display: block;
+    .wrapper {
+        height: 100%;
+        margin-bottom: -1 * $footer-height;
+        .header {
+            text-align: center;
+            background-color: blue;
+            height: $header-height;
+            line-height: $header-height;
+            display: block;
+        }
+        .content {
+            display: block;
+            padding: 15px;
+        }
+    }
+    .footer {
+        height: $footer-height;
+        line-height: $footer-height;
+        display: block;
+        background-color: blue;
+        text-align: center;
+    }
+}

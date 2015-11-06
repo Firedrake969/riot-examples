@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Riot examples</title>
+        <script src="static/js/vendor/riot.min.js"></script>
+        <script src="static/js/vendor/axios.min.js"></script>
+        <link rel="stylesheet" href="static/css/style.css" />
+
+        <!-- load the tags up -->
+        <script src="static/js/components/header.tag" type="riot/tag"></script>
+        <script src="static/js/components/footer.tag" type="riot/tag"></script>
+        <script src="static/js/components/content.tag" type="riot/tag"></script>
+        <script src="static/js/components/app.tag" type="riot/tag"></script>
+    </head>
+    <body>
+        <app class="app">test children...</app>
+        <script>
+            axios.get('static/data.json')
+                .then(function(data) {
+                    // mount the main tag with the data in the JSON file
+                    riot.mount('app', {'data': data.data});
+                })
+                .catch(function(error) {
+                    console.log('Make sure you\'re using "python -m SimpleHTTPServer"!');
+                });
+        </script>
+    </body>
+</html>
