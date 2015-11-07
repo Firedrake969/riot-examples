@@ -12,23 +12,39 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: gray;
   display: block; }
   .app .wrapper {
-    height: 100%;
-    margin-bottom: -125px; }
+    min-height: 100%;
+    margin-bottom: -100px; }
     .app .wrapper .header {
       text-align: center;
       background-color: blue;
-      height: 100px;
-      line-height: 100px;
+      height: 75px;
+      line-height: 75px;
       display: block; }
     .app .wrapper .content {
       display: block;
       padding: 15px; }
+      .app .wrapper .content .post {
+        width: 750px;
+        border: 1px solid black;
+        display: block;
+        margin: 15px auto;
+        padding: 10px;
+        background-color: white;
+        border-radius: 0px 10px; }
+      .app .wrapper .content .post-search {
+        margin: 15px auto;
+        width: 750px; }
+        .app .wrapper .content .post-search > input,
+        .app .wrapper .content .post-search label {
+          display: block;
+          margin: 5px 0; }
+    .app .wrapper .push {
+      height: 100px; }
   .app .footer {
-    height: 125px;
-    line-height: 125px;
+    height: 100px;
+    line-height: 100px;
     display: block;
     background-color: blue;
     text-align: center; }

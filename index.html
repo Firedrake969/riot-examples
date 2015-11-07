@@ -9,11 +9,18 @@
         <!-- load the tags up -->
         <script src="static/js/components/header.tag" type="riot/tag"></script>
         <script src="static/js/components/footer.tag" type="riot/tag"></script>
-        <script src="static/js/components/content.tag" type="riot/tag"></script>
+        <script src="static/js/components/post.tag" type="riot/tag"></script>
         <script src="static/js/components/app.tag" type="riot/tag"></script>
     </head>
     <body>
-        <app class="app">test children...</app>
+        <app class="app">
+            <post class="post" title="Sticky" author="Admin" date="11/7/15">
+                stickied post #1
+            </post>
+            <post class="post" title="Sticky 2" author="Admin 2" date="11/8/15">
+                stickied post #2
+            </post>
+        </app>
         <script>
             axios.get('static/data.json')
                 .then(function(data) {
